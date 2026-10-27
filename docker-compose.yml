@@ -1,0 +1,21 @@
+services:
+  postgis:
+    image: postgis/postgis:16-3.4
+    container_name: vecdim-postgis
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: vecdim
+      POSTGRES_USER: vecdim_admin
+      POSTGRES_PASSWORD: vecdim_secret_2026
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgis_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U vecdim_admin -d vecdim"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  postgis_data:

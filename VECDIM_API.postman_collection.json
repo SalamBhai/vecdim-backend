@@ -1,0 +1,214 @@
+{
+  "info": {
+    "name": "VECDIM Public Health API",
+    "_postman_id": "c1f7a4e8-8b9d-4e2a-9f12-7d3a5e8b0a11",
+    "description": "Postman Collection for VECDIM Vector-Borne Disease Early Warning System (UNIOSUN Technical Submission).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "System",
+      "item": [
+        {
+          "name": "1. Health Check (Must)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/health",
+              "host": ["{{baseUrl}}"],
+              "path": ["health"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Sync & Ingestion",
+      "item": [
+        {
+          "name": "2. Batch Ingestion (Partial Failure & Staging)",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "X-User-Id", "value": "u_field_01" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"records\": [\n    {\n      \"record_id\": \"3f2a9c1e-5b7d-4e8a-9c21-7d4e5f6a8b90\",\n      \"state\": \"Osun\",\n      \"lga\": \"Osogbo\",\n      \"ward\": \"Osogbo Ward 2\",\n      \"latitude\": 7.77,\n      \"longitude\": 4.56,\n      \"gps_accuracy_m\": 6.5,\n      \"collection_date\": \"2026-10-07\",\n      \"species\": \"An. gambiae s.s.\",\n      \"insecticide\": \"Permethrin\",\n      \"n_exposed\": 100,\n      \"n_dead\": 54,\n      \"larval_density\": 6,\n      \"urban\": 1,\n      \"irs_covered\": 0,\n      \"itn_use_pct\": 61.5,\n      \"captured_at\": \"2026-10-07T09:14:22Z\"\n    },\n    {\n      \"record_id\": \"8c1d0b22-4f3e-4a57-b6f1-2e9a77c0d314\",\n      \"state\": \"Osun\",\n      \"lga\": \"Osogbo\",\n      \"ward\": \"Osogbo Ward 2\",\n      \"latitude\": 7.77,\n      \"longitude\": 4.56,\n      \"gps_accuracy_m\": 6.5,\n      \"collection_date\": \"2026-10-07\",\n      \"species\": \"An. gambiae s.s.\",\n      \"insecticide\": \"Permethrin\",\n      \"n_exposed\": 100,\n      \"n_dead\": 120\n    }\n  ]\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/records/batch",
+              "host": ["{{baseUrl}}"],
+              "path": ["records", "batch"]
+            }
+          }
+        },
+        {
+          "name": "3. Batch Ingestion (Idempotency Check)",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "X-User-Id", "value": "u_field_01" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"records\": [\n    {\n      \"record_id\": \"3f2a9c1e-5b7d-4e8a-9c21-7d4e5f6a8b90\",\n      \"state\": \"Osun\",\n      \"lga\": \"Osogbo\",\n      \"ward\": \"Osogbo Ward 2\",\n      \"latitude\": 7.77,\n      \"longitude\": 4.56,\n      \"collection_date\": \"2026-10-07\",\n      \"species\": \"An. gambiae s.s.\",\n      \"insecticide\": \"Permethrin\",\n      \"n_exposed\": 100,\n      \"n_dead\": 54\n    }\n  ]\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/records/batch",
+              "host": ["{{baseUrl}}"],
+              "path": ["records", "batch"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Records Query",
+      "item": [
+        {
+          "name": "4. Query Records (Field Worker - Own Records Only)",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "X-User-Id", "value": "u_field_01" }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/records",
+              "host": ["{{baseUrl}}"],
+              "path": ["records"]
+            }
+          }
+        },
+        {
+          "name": "5. Query Records (National User - All Records)",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "X-User-Id", "value": "u_uniosun_01" }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/records?state=Osun",
+              "host": ["{{baseUrl}}"],
+              "path": ["records"],
+              "query": [
+                { "key": "state", "value": "Osun" }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Alerts & Decision Support",
+      "item": [
+        {
+          "name": "6. Get Alerts (National - 647 Alerts & Tier Totals)",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "X-User-Id", "value": "u_uniosun_01" }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/alerts",
+              "host": ["{{baseUrl}}"],
+              "path": ["alerts"]
+            }
+          }
+        },
+        {
+          "name": "7. Get Alerts (Osun State Scoped)",
+          "request": {
+            "method": "GET",
+            "header": [
+              { "key": "X-User-Id", "value": "u_vecdim_osun" }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/alerts",
+              "host": ["{{baseUrl}}"],
+              "path": ["alerts"]
+            }
+          }
+        },
+        {
+          "name": "8. Acknowledge Alert (Bonus)",
+          "request": {
+            "method": "POST",
+            "header": [
+              { "key": "Content-Type", "value": "application/json" },
+              { "key": "X-User-Id", "value": "u_vecdim_osun" }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"note\": \"Distributed 2,500 LLINs and deployed larviciding in Osogbo.\"\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/alerts/Osun|Iwo|2026-06/acknowledge",
+              "host": ["{{baseUrl}}"],
+              "path": ["alerts", "Osun|Iwo|2026-06", "acknowledge"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Spatial & GIS",
+      "item": [
+        {
+          "name": "9. PostGIS Risk Points (GeoJSON Bounding Box)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/risk-points?bbox=2.5,4.0,15.0,14.0",
+              "host": ["{{baseUrl}}"],
+              "path": ["risk-points"],
+              "query": [
+                { "key": "bbox", "value": "2.5,4.0,15.0,14.0" }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "DHIS2 & Analytics Pipeline",
+      "item": [
+        {
+          "name": "10. Export to DHIS2 (dataValueSets JSON)",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/export/dhis2",
+              "host": ["{{baseUrl}}"],
+              "path": ["export", "dhis2"]
+            }
+          }
+        },
+        {
+          "name": "11. Trigger R Pipeline (On-Demand Execution)",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/pipeline/run",
+              "host": ["{{baseUrl}}"],
+              "path": ["pipeline", "run"]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,648 @@
+"state","lga","ym","n","mean_p_high","mean_pyrethroid_mort","alert","pyrethroid_resistance_flag"
+"Kano","Dala","2022-01",1,0.021,48,"WATCH",TRUE
+"Kano","Dala","2022-03",2,0.035,61.4,"WATCH",TRUE
+"Kano","Dala","2022-04",2,0.108,66.7,"WATCH",TRUE
+"Kano","Dala","2022-05",1,0.108,NA,"WATCH",FALSE
+"Kano","Dala","2022-06",2,0.24,80,"WATCH",TRUE
+"Kano","Dala","2022-07",1,0.726,76,"ALERT",TRUE
+"Kano","Dala","2022-10",3,0.289,60.5,"WATCH",TRUE
+"Kano","Dala","2022-12",2,0.065,56,"WATCH",TRUE
+"Kano","Dala","2023-01",3,0.047,64,"WATCH",TRUE
+"Kano","Dala","2023-02",3,0.145,66.7,"WATCH",TRUE
+"Kano","Dala","2023-03",3,0.043,66.3,"WATCH",TRUE
+"Kano","Dala","2023-06",2,0.187,80.5,"WATCH",TRUE
+"Kano","Dala","2023-07",1,0.639,59,"WARNING",TRUE
+"Kano","Dala","2023-08",3,0.623,67,"WARNING",TRUE
+"Kano","Dala","2023-09",4,0.674,68,"WARNING",TRUE
+"Kano","Dala","2023-10",3,0.091,79.7,"WATCH",TRUE
+"Kano","Dala","2023-11",1,0.289,NA,"WATCH",FALSE
+"Kano","Dala","2023-12",2,0.094,84,"WATCH",TRUE
+"Kano","Dala","2024-01",1,0.022,NA,"WATCH",FALSE
+"Kano","Dala","2024-02",1,0.3,59,"WATCH",TRUE
+"Kano","Dala","2024-03",1,0.011,49.6,"WATCH",TRUE
+"Kano","Dala","2024-05",1,0.102,54,"WATCH",TRUE
+"Kano","Dala","2024-06",5,0.335,56.7,"WATCH",TRUE
+"Kano","Dala","2024-07",2,0.802,49.3,"ALERT",TRUE
+"Kano","Dala","2024-08",1,0.314,NA,"WATCH",FALSE
+"Kano","Dala","2024-09",2,0.346,44.6,"WATCH",TRUE
+"Kano","Dala","2024-10",2,0.378,71.8,"WATCH",TRUE
+"Kano","Dala","2024-11",1,0.254,62,"WATCH",TRUE
+"Kano","Dala","2024-12",4,0.059,65.9,"WATCH",TRUE
+"Kano","Dala","2025-01",2,0.093,60,"WATCH",TRUE
+"Kano","Dala","2025-02",2,0.08,NA,"WATCH",FALSE
+"Kano","Dala","2025-03",1,0.063,NA,"WATCH",FALSE
+"Kano","Dala","2025-04",3,0.059,73.9,"WATCH",TRUE
+"Kano","Dala","2025-05",1,0.134,NA,"WATCH",FALSE
+"Kano","Dala","2025-07",2,0.847,59,"ALERT",TRUE
+"Kano","Dala","2025-08",2,0.806,73.7,"ALERT",TRUE
+"Kano","Dala","2025-09",2,0.746,72,"ALERT",TRUE
+"Kano","Dala","2025-10",2,0.125,66.7,"WATCH",TRUE
+"Kano","Dala","2025-12",5,0.073,57.7,"WATCH",TRUE
+"Kano","Dala","2026-01",3,0.018,61.6,"WATCH",TRUE
+"Kano","Dala","2026-02",1,0.314,NA,"WATCH",FALSE
+"Kano","Dala","2026-03",4,0.018,72.5,"WATCH",TRUE
+"Kano","Dala","2026-04",1,0.034,NA,"WATCH",FALSE
+"Kano","Dala","2026-05",2,0.149,75,"WATCH",TRUE
+"Kano","Dala","2026-06",2,0.134,56.6,"WATCH",TRUE
+"Kano","Gwale","2022-01",2,0.108,72,"WATCH",TRUE
+"Kano","Gwale","2022-02",6,0.059,61.8,"WATCH",TRUE
+"Kano","Gwale","2022-03",3,0.052,50.9,"WATCH",TRUE
+"Kano","Gwale","2022-06",1,0.08,NA,"WATCH",FALSE
+"Kano","Gwale","2022-07",3,0.66,76.8,"WARNING",TRUE
+"Kano","Gwale","2022-10",1,0.119,61,"WATCH",TRUE
+"Kano","Gwale","2022-11",2,0.213,NA,"WATCH",FALSE
+"Kano","Gwale","2023-01",2,0.02,69.5,"WATCH",TRUE
+"Kano","Gwale","2023-03",2,0.013,67.2,"WATCH",TRUE
+"Kano","Gwale","2023-04",2,0.118,65,"WATCH",TRUE
+"Kano","Gwale","2023-05",1,0.297,76.8,"WATCH",TRUE
+"Kano","Gwale","2023-06",2,0.255,60.7,"WATCH",TRUE
+"Kano","Gwale","2023-07",1,0.628,NA,"WARNING",FALSE
+"Kano","Gwale","2023-09",2,0.482,66.4,"WATCH",TRUE
+"Kano","Gwale","2023-10",2,0.136,77,"WATCH",TRUE
+"Kano","Gwale","2023-11",2,0.15,76.5,"WATCH",TRUE
+"Kano","Gwale","2023-12",1,0.072,64,"WATCH",TRUE
+"Kano","Gwale","2024-02",3,0.026,64.6,"WATCH",TRUE
+"Kano","Gwale","2024-03",1,0.005,70,"WATCH",TRUE
+"Kano","Gwale","2024-04",3,0.056,59.4,"WATCH",TRUE
+"Kano","Gwale","2024-05",1,0.135,72.8,"WATCH",TRUE
+"Kano","Gwale","2024-06",4,0.27,70.7,"WATCH",TRUE
+"Kano","Gwale","2024-07",1,0.683,48,"WARNING",TRUE
+"Kano","Gwale","2024-09",2,0.594,60,"WARNING",TRUE
+"Kano","Gwale","2024-10",4,0.329,63.2,"WATCH",TRUE
+"Kano","Gwale","2024-11",1,0.091,72,"WATCH",TRUE
+"Kano","Gwale","2025-01",3,0.091,NA,"WATCH",FALSE
+"Kano","Gwale","2025-02",2,0.107,72,"WATCH",TRUE
+"Kano","Gwale","2025-03",1,0.051,78,"WATCH",TRUE
+"Kano","Gwale","2025-05",2,0.103,NA,"WATCH",FALSE
+"Kano","Gwale","2025-07",2,0.759,79,"ALERT",TRUE
+"Kano","Gwale","2025-08",3,0.655,72.2,"WARNING",TRUE
+"Kano","Gwale","2025-10",1,0.679,NA,"WARNING",FALSE
+"Kano","Gwale","2025-11",4,0.166,74.2,"WATCH",TRUE
+"Kano","Gwale","2025-12",1,0.171,NA,"WATCH",FALSE
+"Kano","Gwale","2026-01",2,0.059,NA,"WATCH",FALSE
+"Kano","Gwale","2026-02",1,0.029,67,"WATCH",TRUE
+"Kano","Gwale","2026-03",3,0.02,56.1,"WATCH",TRUE
+"Kano","Gwale","2026-04",1,0.162,59,"WATCH",TRUE
+"Kano","Gwale","2026-05",5,0.077,66.8,"WATCH",TRUE
+"Kano","Nasarawa","2022-01",1,0.022,NA,"WATCH",FALSE
+"Kano","Nasarawa","2022-02",1,0.056,68,"WATCH",TRUE
+"Kano","Nasarawa","2022-03",2,0.068,NA,"WATCH",FALSE
+"Kano","Nasarawa","2022-04",3,0.015,63.7,"WATCH",TRUE
+"Kano","Nasarawa","2022-05",1,0.091,69,"WATCH",TRUE
+"Kano","Nasarawa","2022-08",3,0.862,62.6,"ALERT",TRUE
+"Kano","Nasarawa","2022-10",3,0.344,59.4,"WATCH",TRUE
+"Kano","Nasarawa","2022-11",2,0.302,54.5,"WATCH",TRUE
+"Kano","Nasarawa","2022-12",2,0.096,62,"WATCH",TRUE
+"Kano","Nasarawa","2023-03",4,0.088,52.3,"WATCH",TRUE
+"Kano","Nasarawa","2023-04",1,0.031,63,"WATCH",TRUE
+"Kano","Nasarawa","2023-06",3,0.19,62.7,"WATCH",TRUE
+"Kano","Nasarawa","2023-07",2,0.784,67,"ALERT",TRUE
+"Kano","Nasarawa","2023-09",1,0.749,60,"ALERT",TRUE
+"Kano","Nasarawa","2023-11",1,0.1,NA,"WATCH",FALSE
+"Kano","Nasarawa","2023-12",1,0.175,74.7,"WATCH",TRUE
+"Kano","Nasarawa","2024-01",1,0.184,77,"WATCH",TRUE
+"Kano","Nasarawa","2024-02",1,0.023,51,"WATCH",TRUE
+"Kano","Nasarawa","2024-03",2,0.042,75.2,"WATCH",TRUE
+"Kano","Nasarawa","2024-04",1,0.061,NA,"WATCH",FALSE
+"Kano","Nasarawa","2024-05",3,0.213,62.3,"WATCH",TRUE
+"Kano","Nasarawa","2024-06",1,0.487,64,"WATCH",TRUE
+"Kano","Nasarawa","2024-07",2,0.723,53.3,"ALERT",TRUE
+"Kano","Nasarawa","2024-09",2,0.368,68,"WATCH",TRUE
+"Kano","Nasarawa","2024-11",1,0.074,56,"WATCH",TRUE
+"Kano","Nasarawa","2024-12",2,0.052,69,"WATCH",TRUE
+"Kano","Nasarawa","2025-01",1,0.031,64,"WATCH",TRUE
+"Kano","Nasarawa","2025-02",2,0.173,64,"WATCH",TRUE
+"Kano","Nasarawa","2025-03",1,0.021,55.2,"WATCH",TRUE
+"Kano","Nasarawa","2025-04",1,0.065,73,"WATCH",TRUE
+"Kano","Nasarawa","2025-05",3,0.059,57.9,"WATCH",TRUE
+"Kano","Nasarawa","2025-06",1,0.076,63,"WATCH",TRUE
+"Kano","Nasarawa","2025-08",3,0.777,81,"ALERT",TRUE
+"Kano","Nasarawa","2025-09",1,0.6,54,"WARNING",TRUE
+"Kano","Nasarawa","2025-10",1,0.495,60,"WATCH",TRUE
+"Kano","Nasarawa","2025-11",2,0.347,71.5,"WATCH",TRUE
+"Kano","Nasarawa","2025-12",2,0.122,62,"WATCH",TRUE
+"Kano","Nasarawa","2026-01",1,0.027,88,"WATCH",TRUE
+"Kano","Nasarawa","2026-05",6,0.095,68.8,"WATCH",TRUE
+"Kano","Nasarawa","2026-06",1,0.135,56,"WATCH",TRUE
+"Kano","Tarauni","2022-01",2,0.135,NA,"WATCH",FALSE
+"Kano","Tarauni","2022-03",2,0.017,NA,"WATCH",FALSE
+"Kano","Tarauni","2022-04",1,0.049,69,"WATCH",TRUE
+"Kano","Tarauni","2022-05",1,0.066,59,"WATCH",TRUE
+"Kano","Tarauni","2022-06",1,0.579,NA,"WARNING",FALSE
+"Kano","Tarauni","2022-08",1,0.549,69,"WARNING",TRUE
+"Kano","Tarauni","2022-10",1,0.344,71,"WATCH",TRUE
+"Kano","Tarauni","2022-11",1,0.092,54.7,"WATCH",TRUE
+"Kano","Tarauni","2022-12",2,0.171,68.8,"WATCH",TRUE
+"Kano","Tarauni","2023-01",1,0.084,NA,"WATCH",FALSE
+"Kano","Tarauni","2023-02",1,0.02,83,"WATCH",TRUE
+"Kano","Tarauni","2023-03",1,0.017,62,"WATCH",TRUE
+"Kano","Tarauni","2023-04",1,0.129,77,"WATCH",TRUE
+"Kano","Tarauni","2023-06",5,0.14,57.5,"WATCH",TRUE
+"Kano","Tarauni","2023-07",2,0.717,76,"ALERT",TRUE
+"Kano","Tarauni","2023-08",5,0.66,61.2,"WARNING",TRUE
+"Kano","Tarauni","2023-11",1,0.105,52,"WATCH",TRUE
+"Kano","Tarauni","2023-12",2,0.071,67,"WATCH",TRUE
+"Kano","Tarauni","2024-01",2,0.125,69,"WATCH",TRUE
+"Kano","Tarauni","2024-03",1,0,61,"WATCH",TRUE
+"Kano","Tarauni","2024-04",2,0.055,70.8,"WATCH",TRUE
+"Kano","Tarauni","2024-05",1,0.122,82.4,"WATCH",TRUE
+"Kano","Tarauni","2024-06",1,0.705,NA,"ALERT",FALSE
+"Kano","Tarauni","2024-07",2,0.76,61.4,"ALERT",TRUE
+"Kano","Tarauni","2024-09",3,0.762,74.5,"ALERT",TRUE
+"Kano","Tarauni","2024-10",3,0.259,60,"WATCH",TRUE
+"Kano","Tarauni","2024-11",2,0.17,70,"WATCH",TRUE
+"Kano","Tarauni","2024-12",4,0.088,70.3,"WATCH",TRUE
+"Kano","Tarauni","2025-01",3,0.062,67.7,"WATCH",TRUE
+"Kano","Tarauni","2025-03",4,0.067,66.2,"WATCH",TRUE
+"Kano","Tarauni","2025-05",2,0.139,68.4,"WATCH",TRUE
+"Kano","Tarauni","2025-06",2,0.213,71.5,"WATCH",TRUE
+"Kano","Tarauni","2025-07",1,0.576,NA,"WARNING",FALSE
+"Kano","Tarauni","2025-08",1,0.553,65,"WARNING",TRUE
+"Kano","Tarauni","2025-09",2,0.754,80,"ALERT",TRUE
+"Kano","Tarauni","2025-10",2,0.401,65,"WATCH",TRUE
+"Kano","Tarauni","2025-11",2,0.243,59.2,"WATCH",TRUE
+"Kano","Tarauni","2025-12",2,0.173,NA,"WATCH",FALSE
+"Kano","Tarauni","2026-01",1,0.012,NA,"WATCH",FALSE
+"Kano","Tarauni","2026-02",2,0.08,78.5,"WATCH",TRUE
+"Kano","Tarauni","2026-03",2,0.037,81.3,"WATCH",TRUE
+"Kano","Tarauni","2026-04",2,0.061,66.9,"WATCH",TRUE
+"Kano","Tarauni","2026-05",2,0.062,58,"WATCH",TRUE
+"Kano","Tarauni","2026-06",4,0.365,55.5,"WATCH",TRUE
+"Kano","Ungogo","2022-01",2,0.092,71,"WATCH",TRUE
+"Kano","Ungogo","2022-03",1,0.005,NA,"WATCH",FALSE
+"Kano","Ungogo","2022-04",2,0.078,77.8,"WATCH",TRUE
+"Kano","Ungogo","2022-06",2,0.384,NA,"WATCH",FALSE
+"Kano","Ungogo","2022-08",3,0.649,60.9,"WARNING",TRUE
+"Kano","Ungogo","2022-09",2,0.775,60.6,"ALERT",TRUE
+"Kano","Ungogo","2022-10",2,0.453,60,"WATCH",TRUE
+"Kano","Ungogo","2022-11",1,0.254,76,"WATCH",TRUE
+"Kano","Ungogo","2022-12",1,0.01,80.8,"WATCH",TRUE
+"Kano","Ungogo","2023-02",1,0.058,70.7,"WATCH",TRUE
+"Kano","Ungogo","2023-03",4,0.052,62.1,"WATCH",TRUE
+"Kano","Ungogo","2023-04",1,0.066,70,"WATCH",TRUE
+"Kano","Ungogo","2023-05",2,0.114,66.1,"WATCH",TRUE
+"Kano","Ungogo","2023-06",2,0.367,62.7,"WATCH",TRUE
+"Kano","Ungogo","2023-07",2,0.714,56.4,"ALERT",TRUE
+"Kano","Ungogo","2023-09",3,0.725,71,"ALERT",TRUE
+"Kano","Ungogo","2023-10",1,0.612,74.4,"WARNING",TRUE
+"Kano","Ungogo","2023-11",3,0.217,77.7,"WATCH",TRUE
+"Kano","Ungogo","2024-01",3,0.064,73,"WATCH",TRUE
+"Kano","Ungogo","2024-02",3,0.04,61.1,"WATCH",TRUE
+"Kano","Ungogo","2024-03",3,0.025,66.3,"WATCH",TRUE
+"Kano","Ungogo","2024-04",2,0.034,56,"WATCH",TRUE
+"Kano","Ungogo","2024-05",1,0.082,74,"WATCH",TRUE
+"Kano","Ungogo","2024-08",2,0.745,72.5,"ALERT",TRUE
+"Kano","Ungogo","2024-09",3,0.484,52.5,"WATCH",TRUE
+"Kano","Ungogo","2024-10",2,0.244,63,"WATCH",TRUE
+"Kano","Ungogo","2024-11",3,0.186,52,"WATCH",TRUE
+"Kano","Ungogo","2024-12",2,0.068,49.6,"WATCH",TRUE
+"Kano","Ungogo","2025-01",5,0.094,74.2,"WATCH",TRUE
+"Kano","Ungogo","2025-02",2,0.024,65.3,"WATCH",TRUE
+"Kano","Ungogo","2025-04",1,0.031,NA,"WATCH",FALSE
+"Kano","Ungogo","2025-05",5,0.139,66,"WATCH",TRUE
+"Kano","Ungogo","2025-06",2,0.242,62.7,"WATCH",TRUE
+"Kano","Ungogo","2025-08",2,0.881,55,"ALERT",TRUE
+"Kano","Ungogo","2025-09",3,0.449,NA,"WATCH",FALSE
+"Kano","Ungogo","2025-10",2,0.428,70.3,"WATCH",TRUE
+"Kano","Ungogo","2025-11",1,0.08,62.7,"WATCH",TRUE
+"Kano","Ungogo","2025-12",2,0.073,76.9,"WATCH",TRUE
+"Kano","Ungogo","2026-01",1,0.016,82,"WATCH",TRUE
+"Kano","Ungogo","2026-02",1,0.016,48,"WATCH",TRUE
+"Kano","Ungogo","2026-03",5,0.041,73,"WATCH",TRUE
+"Kano","Ungogo","2026-04",5,0.114,63.6,"WATCH",TRUE
+"Kano","Ungogo","2026-05",1,0.382,65.3,"WATCH",TRUE
+"Kano","Ungogo","2026-06",1,0.139,NA,"WATCH",FALSE
+"Lagos","Alimosho","2022-02",1,0.288,NA,"WATCH",FALSE
+"Lagos","Alimosho","2022-03",1,0.227,67.2,"WATCH",TRUE
+"Lagos","Alimosho","2022-04",1,0.245,52,"WATCH",TRUE
+"Lagos","Alimosho","2022-05",2,0.576,39.4,"WARNING",TRUE
+"Lagos","Alimosho","2022-06",4,0.675,59.8,"WARNING",TRUE
+"Lagos","Alimosho","2022-07",2,0.549,53.4,"WARNING",TRUE
+"Lagos","Alimosho","2022-09",1,0.777,NA,"ALERT",FALSE
+"Lagos","Alimosho","2022-10",3,0.341,53.3,"WATCH",TRUE
+"Lagos","Alimosho","2022-11",2,0.521,26,"WARNING",TRUE
+"Lagos","Alimosho","2022-12",2,0.196,49.5,"WATCH",TRUE
+"Lagos","Alimosho","2023-01",2,0.204,59,"WATCH",TRUE
+"Lagos","Alimosho","2023-02",2,0.249,53.6,"WATCH",TRUE
+"Lagos","Alimosho","2023-03",1,0.274,51.2,"WATCH",TRUE
+"Lagos","Alimosho","2023-04",1,0.603,61.6,"WARNING",TRUE
+"Lagos","Alimosho","2023-05",3,0.701,43,"ALERT",TRUE
+"Lagos","Alimosho","2023-06",1,0.747,50,"ALERT",TRUE
+"Lagos","Alimosho","2023-07",1,0.508,45,"WARNING",TRUE
+"Lagos","Alimosho","2023-08",1,0.5,25,"WARNING",TRUE
+"Lagos","Alimosho","2023-09",3,0.722,NA,"ALERT",FALSE
+"Lagos","Alimosho","2023-10",4,0.616,51.1,"WARNING",TRUE
+"Lagos","Alimosho","2023-11",1,0.201,74,"WATCH",TRUE
+"Lagos","Alimosho","2024-01",1,0.202,NA,"WATCH",FALSE
+"Lagos","Alimosho","2024-02",3,0.322,47.9,"WATCH",TRUE
+"Lagos","Alimosho","2024-03",4,0.281,50.6,"WATCH",TRUE
+"Lagos","Alimosho","2024-05",2,0.647,61.7,"WARNING",TRUE
+"Lagos","Alimosho","2024-06",3,0.651,53.5,"WARNING",TRUE
+"Lagos","Alimosho","2024-07",3,0.582,44,"WARNING",TRUE
+"Lagos","Alimosho","2024-08",4,0.742,61.4,"ALERT",TRUE
+"Lagos","Alimosho","2024-09",2,0.525,74.7,"WARNING",TRUE
+"Lagos","Alimosho","2024-10",1,0.288,65,"WATCH",TRUE
+"Lagos","Alimosho","2024-11",1,0.599,43.2,"WARNING",TRUE
+"Lagos","Alimosho","2025-02",3,0.359,54.5,"WATCH",TRUE
+"Lagos","Alimosho","2025-03",1,0.386,38.7,"WATCH",TRUE
+"Lagos","Alimosho","2025-04",2,0.642,56,"WARNING",TRUE
+"Lagos","Alimosho","2025-05",1,0.631,61,"WARNING",TRUE
+"Lagos","Alimosho","2025-07",2,0.677,65.8,"WARNING",TRUE
+"Lagos","Alimosho","2025-08",2,0.605,58.4,"WARNING",TRUE
+"Lagos","Alimosho","2025-09",1,0.374,45,"WATCH",TRUE
+"Lagos","Alimosho","2025-10",4,0.519,56.1,"WARNING",TRUE
+"Lagos","Alimosho","2025-11",3,0.448,75,"WATCH",TRUE
+"Lagos","Alimosho","2025-12",2,0.409,47.4,"WATCH",TRUE
+"Lagos","Alimosho","2026-02",3,0.179,55.4,"WATCH",TRUE
+"Lagos","Alimosho","2026-03",2,0.31,48.4,"WATCH",TRUE
+"Lagos","Alimosho","2026-04",3,0.444,50.3,"WATCH",TRUE
+"Lagos","Alimosho","2026-05",2,0.647,40.5,"WARNING",TRUE
+"Lagos","Alimosho","2026-06",3,0.669,48.7,"WARNING",TRUE
+"Lagos","Badagry","2022-02",1,0.43,28,"WATCH",TRUE
+"Lagos","Badagry","2022-04",1,0.621,NA,"WARNING",FALSE
+"Lagos","Badagry","2022-05",3,0.533,65,"WARNING",TRUE
+"Lagos","Badagry","2022-06",1,0.604,70,"WARNING",TRUE
+"Lagos","Badagry","2022-07",3,0.731,65,"ALERT",TRUE
+"Lagos","Badagry","2022-10",2,0.215,52,"WATCH",TRUE
+"Lagos","Badagry","2022-11",4,0.487,57,"WATCH",TRUE
+"Lagos","Badagry","2023-01",1,0.421,33,"WATCH",TRUE
+"Lagos","Badagry","2023-02",1,0.119,NA,"WATCH",FALSE
+"Lagos","Badagry","2023-03",5,0.247,53,"WATCH",TRUE
+"Lagos","Badagry","2023-04",1,0.509,48.8,"WARNING",TRUE
+"Lagos","Badagry","2023-06",1,0.506,72,"WARNING",TRUE
+"Lagos","Badagry","2023-07",3,0.749,60.7,"ALERT",TRUE
+"Lagos","Badagry","2023-08",2,0.673,57.3,"WARNING",TRUE
+"Lagos","Badagry","2023-09",2,0.713,42,"ALERT",TRUE
+"Lagos","Badagry","2023-10",2,0.48,56.8,"WATCH",TRUE
+"Lagos","Badagry","2023-11",5,0.366,48.9,"WATCH",TRUE
+"Lagos","Badagry","2024-01",1,0.427,63.2,"WATCH",TRUE
+"Lagos","Badagry","2024-02",1,0.358,34.7,"WATCH",TRUE
+"Lagos","Badagry","2024-03",3,0.378,50.6,"WATCH",TRUE
+"Lagos","Badagry","2024-04",2,0.477,58.5,"WATCH",TRUE
+"Lagos","Badagry","2024-05",2,0.441,54.7,"WATCH",TRUE
+"Lagos","Badagry","2024-06",3,0.59,58.7,"WARNING",TRUE
+"Lagos","Badagry","2024-07",1,0.661,52,"WARNING",TRUE
+"Lagos","Badagry","2024-08",3,0.663,50,"WARNING",TRUE
+"Lagos","Badagry","2024-10",1,0.547,49,"WARNING",TRUE
+"Lagos","Badagry","2024-11",1,0.655,46,"WARNING",TRUE
+"Lagos","Badagry","2024-12",1,0.257,77.6,"WATCH",TRUE
+"Lagos","Badagry","2025-01",1,0.28,NA,"WATCH",FALSE
+"Lagos","Badagry","2025-02",3,0.164,58.4,"WATCH",TRUE
+"Lagos","Badagry","2025-03",1,0.374,60,"WATCH",TRUE
+"Lagos","Badagry","2025-04",2,0.451,71,"WATCH",TRUE
+"Lagos","Badagry","2025-05",1,0.466,68,"WATCH",TRUE
+"Lagos","Badagry","2025-06",2,0.823,39.5,"ALERT",TRUE
+"Lagos","Badagry","2025-07",1,0.77,36,"ALERT",TRUE
+"Lagos","Badagry","2025-08",2,0.842,59,"ALERT",TRUE
+"Lagos","Badagry","2025-09",3,0.698,53,"WARNING",TRUE
+"Lagos","Badagry","2025-11",4,0.405,70.2,"WATCH",TRUE
+"Lagos","Badagry","2025-12",4,0.262,45.5,"WATCH",TRUE
+"Lagos","Badagry","2026-01",2,0.082,51.9,"WATCH",TRUE
+"Lagos","Badagry","2026-03",3,0.4,52.6,"WATCH",TRUE
+"Lagos","Badagry","2026-04",1,0.229,52,"WATCH",TRUE
+"Lagos","Badagry","2026-05",1,0.893,54.4,"ALERT",TRUE
+"Lagos","Badagry","2026-06",6,0.637,46.9,"WARNING",TRUE
+"Lagos","Epe","2022-01",2,0.177,48.7,"WATCH",TRUE
+"Lagos","Epe","2022-03",4,0.206,59.9,"WATCH",TRUE
+"Lagos","Epe","2022-04",1,0.272,64,"WATCH",TRUE
+"Lagos","Epe","2022-05",1,0.864,54,"ALERT",TRUE
+"Lagos","Epe","2022-08",3,0.825,52.5,"ALERT",TRUE
+"Lagos","Epe","2022-09",1,0.444,52,"WATCH",TRUE
+"Lagos","Epe","2022-10",3,0.581,43.1,"WARNING",TRUE
+"Lagos","Epe","2022-12",2,0.197,NA,"WATCH",FALSE
+"Lagos","Epe","2023-01",1,0.165,41,"WATCH",TRUE
+"Lagos","Epe","2023-02",4,0.18,54.9,"WATCH",TRUE
+"Lagos","Epe","2023-04",3,0.393,55.5,"WATCH",TRUE
+"Lagos","Epe","2023-05",2,0.58,50.4,"WARNING",TRUE
+"Lagos","Epe","2023-07",1,0.741,51,"ALERT",TRUE
+"Lagos","Epe","2023-08",2,0.626,54.6,"WARNING",TRUE
+"Lagos","Epe","2023-09",1,0.649,NA,"WARNING",FALSE
+"Lagos","Epe","2023-11",1,0.237,NA,"WATCH",FALSE
+"Lagos","Epe","2023-12",1,0.251,NA,"WATCH",FALSE
+"Lagos","Epe","2024-01",2,0.201,49.9,"WATCH",TRUE
+"Lagos","Epe","2024-02",2,0.226,41,"WATCH",TRUE
+"Lagos","Epe","2024-03",1,0.461,39,"WATCH",TRUE
+"Lagos","Epe","2024-07",1,0.667,62,"WARNING",TRUE
+"Lagos","Epe","2024-08",4,0.551,56.1,"WARNING",TRUE
+"Lagos","Epe","2024-09",2,0.609,56.6,"WARNING",TRUE
+"Lagos","Epe","2024-11",3,0.248,54.8,"WATCH",TRUE
+"Lagos","Epe","2025-01",2,0.341,49,"WATCH",TRUE
+"Lagos","Epe","2025-02",2,0.124,44,"WATCH",TRUE
+"Lagos","Epe","2025-04",1,0.479,65.3,"WATCH",TRUE
+"Lagos","Epe","2025-05",1,0.524,65.3,"WARNING",TRUE
+"Lagos","Epe","2025-06",1,0.472,56,"WATCH",TRUE
+"Lagos","Epe","2025-07",2,0.877,43.3,"ALERT",TRUE
+"Lagos","Epe","2025-08",2,0.643,44,"WARNING",TRUE
+"Lagos","Epe","2025-09",1,0.621,52,"WARNING",TRUE
+"Lagos","Epe","2025-10",2,0.575,54,"WARNING",TRUE
+"Lagos","Epe","2025-11",2,0.618,46.4,"WARNING",TRUE
+"Lagos","Epe","2025-12",1,0.554,47,"WARNING",TRUE
+"Lagos","Epe","2026-01",3,0.209,38,"WATCH",TRUE
+"Lagos","Epe","2026-02",3,0.26,49.1,"WATCH",TRUE
+"Lagos","Epe","2026-04",2,0.432,43.9,"WATCH",TRUE
+"Lagos","Epe","2026-05",1,0.608,NA,"WARNING",FALSE
+"Lagos","Eti-Osa","2022-01",4,0.264,50.7,"WATCH",TRUE
+"Lagos","Eti-Osa","2022-02",1,0.467,39.2,"WATCH",TRUE
+"Lagos","Eti-Osa","2022-03",1,0.198,60,"WATCH",TRUE
+"Lagos","Eti-Osa","2022-04",2,0.482,53.5,"WATCH",TRUE
+"Lagos","Eti-Osa","2022-05",1,0.471,NA,"WATCH",FALSE
+"Lagos","Eti-Osa","2022-06",1,0.614,NA,"WARNING",FALSE
+"Lagos","Eti-Osa","2022-07",2,0.76,53.6,"ALERT",TRUE
+"Lagos","Eti-Osa","2022-08",1,0.569,48,"WARNING",TRUE
+"Lagos","Eti-Osa","2022-09",2,0.57,53,"WARNING",TRUE
+"Lagos","Eti-Osa","2022-10",1,0.305,NA,"WATCH",FALSE
+"Lagos","Eti-Osa","2022-11",1,0.381,59,"WATCH",TRUE
+"Lagos","Eti-Osa","2022-12",2,0.234,53,"WATCH",TRUE
+"Lagos","Eti-Osa","2023-01",3,0.192,47.7,"WATCH",TRUE
+"Lagos","Eti-Osa","2023-03",3,0.119,48.5,"WATCH",TRUE
+"Lagos","Eti-Osa","2023-05",2,0.551,53.6,"WARNING",TRUE
+"Lagos","Eti-Osa","2023-06",2,0.651,60,"WARNING",TRUE
+"Lagos","Eti-Osa","2023-07",3,0.659,56.1,"WARNING",TRUE
+"Lagos","Eti-Osa","2023-09",2,0.577,70.4,"WARNING",TRUE
+"Lagos","Eti-Osa","2023-10",2,0.511,52.5,"WARNING",TRUE
+"Lagos","Eti-Osa","2023-11",4,0.45,48,"WATCH",TRUE
+"Lagos","Eti-Osa","2023-12",1,0.235,59,"WATCH",TRUE
+"Lagos","Eti-Osa","2024-01",1,0.185,49,"WATCH",TRUE
+"Lagos","Eti-Osa","2024-02",3,0.409,50.5,"WATCH",TRUE
+"Lagos","Eti-Osa","2024-03",1,0.221,42,"WATCH",TRUE
+"Lagos","Eti-Osa","2024-05",2,0.493,58.9,"WATCH",TRUE
+"Lagos","Eti-Osa","2024-06",1,0.407,21.3,"WATCH",TRUE
+"Lagos","Eti-Osa","2024-07",2,0.441,60.1,"WATCH",TRUE
+"Lagos","Eti-Osa","2024-08",4,0.639,58.1,"WARNING",TRUE
+"Lagos","Eti-Osa","2024-09",1,0.654,57,"WARNING",TRUE
+"Lagos","Eti-Osa","2024-11",2,0.388,64.5,"WATCH",TRUE
+"Lagos","Eti-Osa","2024-12",2,0.26,57.5,"WATCH",TRUE
+"Lagos","Eti-Osa","2025-01",2,0.196,31.2,"WATCH",TRUE
+"Lagos","Eti-Osa","2025-02",1,0.163,46,"WATCH",TRUE
+"Lagos","Eti-Osa","2025-03",1,0.236,NA,"WATCH",FALSE
+"Lagos","Eti-Osa","2025-05",5,0.605,52.9,"WARNING",TRUE
+"Lagos","Eti-Osa","2025-06",1,0.709,NA,"ALERT",FALSE
+"Lagos","Eti-Osa","2025-09",1,0.679,67,"WARNING",TRUE
+"Lagos","Eti-Osa","2025-11",1,0.532,69.6,"WARNING",TRUE
+"Lagos","Eti-Osa","2025-12",3,0.317,45.4,"WATCH",TRUE
+"Lagos","Eti-Osa","2026-01",1,0.379,NA,"WATCH",FALSE
+"Lagos","Eti-Osa","2026-03",1,0.291,38,"WATCH",TRUE
+"Lagos","Eti-Osa","2026-04",1,0.38,50,"WATCH",TRUE
+"Lagos","Eti-Osa","2026-05",2,0.687,54.6,"WARNING",TRUE
+"Lagos","Ikorodu","2022-01",4,0.141,49.8,"WATCH",TRUE
+"Lagos","Ikorodu","2022-02",1,0.256,41,"WATCH",TRUE
+"Lagos","Ikorodu","2022-03",1,0.361,NA,"WATCH",FALSE
+"Lagos","Ikorodu","2022-04",1,0.304,NA,"WATCH",FALSE
+"Lagos","Ikorodu","2022-05",1,0.815,54,"ALERT",TRUE
+"Lagos","Ikorodu","2022-06",1,0.483,37,"WATCH",TRUE
+"Lagos","Ikorodu","2022-07",1,0.647,50.4,"WARNING",TRUE
+"Lagos","Ikorodu","2022-08",2,0.848,50.5,"ALERT",TRUE
+"Lagos","Ikorodu","2022-09",1,0.79,50.7,"ALERT",TRUE
+"Lagos","Ikorodu","2022-10",2,0.509,72,"WARNING",TRUE
+"Lagos","Ikorodu","2022-11",2,0.431,59,"WATCH",TRUE
+"Lagos","Ikorodu","2022-12",2,0.334,46,"WATCH",TRUE
+"Lagos","Ikorodu","2023-01",3,0.314,45.9,"WATCH",TRUE
+"Lagos","Ikorodu","2023-02",1,0.085,NA,"WATCH",FALSE
+"Lagos","Ikorodu","2023-03",1,0.123,NA,"WATCH",FALSE
+"Lagos","Ikorodu","2023-04",1,0.127,NA,"WATCH",FALSE
+"Lagos","Ikorodu","2023-07",4,0.717,51.9,"ALERT",TRUE
+"Lagos","Ikorodu","2023-08",5,0.658,47.7,"WARNING",TRUE
+"Lagos","Ikorodu","2023-09",1,0.317,NA,"WATCH",FALSE
+"Lagos","Ikorodu","2023-10",2,0.314,31,"WATCH",TRUE
+"Lagos","Ikorodu","2023-11",4,0.455,40.3,"WATCH",TRUE
+"Lagos","Ikorodu","2024-01",4,0.186,51.9,"WATCH",TRUE
+"Lagos","Ikorodu","2024-02",3,0.253,54,"WATCH",TRUE
+"Lagos","Ikorodu","2024-03",2,0.424,43.4,"WATCH",TRUE
+"Lagos","Ikorodu","2024-04",3,0.369,49.2,"WATCH",TRUE
+"Lagos","Ikorodu","2024-05",2,0.632,62.9,"WARNING",TRUE
+"Lagos","Ikorodu","2024-06",1,0.888,48,"ALERT",TRUE
+"Lagos","Ikorodu","2024-07",2,0.568,57.5,"WARNING",TRUE
+"Lagos","Ikorodu","2024-08",1,0.537,NA,"WARNING",FALSE
+"Lagos","Ikorodu","2024-11",1,0.33,59,"WATCH",TRUE
+"Lagos","Ikorodu","2024-12",3,0.255,51.3,"WATCH",TRUE
+"Lagos","Ikorodu","2025-01",1,0.215,45,"WATCH",TRUE
+"Lagos","Ikorodu","2025-02",2,0.192,51,"WATCH",TRUE
+"Lagos","Ikorodu","2025-03",3,0.186,56.3,"WATCH",TRUE
+"Lagos","Ikorodu","2025-04",1,0.525,60,"WARNING",TRUE
+"Lagos","Ikorodu","2025-05",1,0.676,36,"WARNING",TRUE
+"Lagos","Ikorodu","2025-06",2,0.604,36,"WARNING",TRUE
+"Lagos","Ikorodu","2025-07",1,0.581,NA,"WARNING",FALSE
+"Lagos","Ikorodu","2025-09",3,0.488,56.1,"WATCH",TRUE
+"Lagos","Ikorodu","2025-10",1,0.674,52,"WARNING",TRUE
+"Lagos","Ikorodu","2025-11",2,0.356,NA,"WATCH",FALSE
+"Lagos","Ikorodu","2025-12",2,0.358,47,"WATCH",TRUE
+"Lagos","Ikorodu","2026-01",1,0.145,38.7,"WATCH",TRUE
+"Lagos","Ikorodu","2026-02",2,0.179,NA,"WATCH",FALSE
+"Lagos","Ikorodu","2026-03",2,0.173,55.4,"WATCH",TRUE
+"Lagos","Ikorodu","2026-04",1,0.534,34,"WARNING",TRUE
+"Lagos","Ikorodu","2026-05",2,0.657,56.5,"WARNING",TRUE
+"Lagos","Ikorodu","2026-06",1,0.718,NA,"ALERT",FALSE
+"Osun","Ede North","2022-01",2,0.127,67,"WATCH",TRUE
+"Osun","Ede North","2022-02",2,0.126,61.8,"WATCH",TRUE
+"Osun","Ede North","2022-03",3,0.16,73.9,"WATCH",TRUE
+"Osun","Ede North","2022-05",1,0.651,44,"WARNING",TRUE
+"Osun","Ede North","2022-06",1,0.676,44,"WARNING",TRUE
+"Osun","Ede North","2022-07",1,0.87,NA,"ALERT",FALSE
+"Osun","Ede North","2022-08",1,0.545,62.4,"WARNING",TRUE
+"Osun","Ede North","2022-09",2,0.603,54.5,"WARNING",TRUE
+"Osun","Ede North","2022-10",2,0.305,50.7,"WATCH",TRUE
+"Osun","Ede North","2022-11",2,0.469,58.1,"WATCH",TRUE
+"Osun","Ede North","2023-01",1,0.039,65.3,"WATCH",TRUE
+"Osun","Ede North","2023-02",2,0.134,62.5,"WATCH",TRUE
+"Osun","Ede North","2023-03",1,0.481,NA,"WATCH",FALSE
+"Osun","Ede North","2023-04",2,0.411,76.4,"WATCH",TRUE
+"Osun","Ede North","2023-05",2,0.527,66.6,"WARNING",TRUE
+"Osun","Ede North","2023-06",1,0.965,50,"ALERT",TRUE
+"Osun","Ede North","2023-07",2,0.823,58,"ALERT",TRUE
+"Osun","Ede North","2023-09",1,0.636,38.7,"WARNING",TRUE
+"Osun","Ede North","2023-10",1,0.459,NA,"WATCH",FALSE
+"Osun","Ede North","2023-11",4,0.288,65.5,"WATCH",TRUE
+"Osun","Ede North","2023-12",2,0.285,43.7,"WATCH",TRUE
+"Osun","Ede North","2024-01",1,0.062,60,"WATCH",TRUE
+"Osun","Ede North","2024-03",1,0.079,40,"WATCH",TRUE
+"Osun","Ede North","2024-05",1,0.777,46,"ALERT",TRUE
+"Osun","Ede North","2024-07",2,0.721,56,"ALERT",TRUE
+"Osun","Ede North","2024-08",1,0.832,64.8,"ALERT",TRUE
+"Osun","Ede North","2024-09",1,0.338,39,"WATCH",TRUE
+"Osun","Ede North","2024-10",2,0.481,67,"WATCH",TRUE
+"Osun","Ede North","2024-11",4,0.379,59.4,"WATCH",TRUE
+"Osun","Ede North","2024-12",3,0.241,63.5,"WATCH",TRUE
+"Osun","Ede North","2025-01",1,0.364,53.3,"WATCH",TRUE
+"Osun","Ede North","2025-02",7,0.136,57.9,"WATCH",TRUE
+"Osun","Ede North","2025-04",1,0.374,60,"WATCH",TRUE
+"Osun","Ede North","2025-05",4,0.543,67.6,"WARNING",TRUE
+"Osun","Ede North","2025-06",2,0.523,55.9,"WARNING",TRUE
+"Osun","Ede North","2025-07",1,0.581,45.6,"WARNING",TRUE
+"Osun","Ede North","2025-08",2,0.761,66.5,"ALERT",TRUE
+"Osun","Ede North","2025-09",4,0.541,61.7,"WARNING",TRUE
+"Osun","Ede North","2025-10",2,0.624,74,"WARNING",TRUE
+"Osun","Ede North","2025-11",3,0.537,54,"WARNING",TRUE
+"Osun","Ede North","2025-12",3,0.372,55,"WATCH",TRUE
+"Osun","Ede North","2026-02",2,0.142,67,"WATCH",TRUE
+"Osun","Ede North","2026-03",3,0.266,46.7,"WATCH",TRUE
+"Osun","Ede North","2026-04",2,0.421,56,"WATCH",TRUE
+"Osun","Ede North","2026-05",1,0.854,56,"ALERT",TRUE
+"Osun","Ede North","2026-06",1,0.863,52,"ALERT",TRUE
+"Osun","Ife Central","2022-01",2,0.014,59.5,"WATCH",TRUE
+"Osun","Ife Central","2022-02",1,0.133,53,"WATCH",TRUE
+"Osun","Ife Central","2022-03",1,0.162,NA,"WATCH",FALSE
+"Osun","Ife Central","2022-05",2,0.48,NA,"WATCH",FALSE
+"Osun","Ife Central","2022-06",1,0.49,48,"WATCH",TRUE
+"Osun","Ife Central","2022-09",3,0.421,62.5,"WATCH",TRUE
+"Osun","Ife Central","2023-01",3,0.218,59.6,"WATCH",TRUE
+"Osun","Ife Central","2023-02",3,0.128,67,"WATCH",TRUE
+"Osun","Ife Central","2023-04",1,0.44,71,"WATCH",TRUE
+"Osun","Ife Central","2023-05",1,0.683,59.2,"WARNING",TRUE
+"Osun","Ife Central","2023-06",2,0.841,66.7,"ALERT",TRUE
+"Osun","Ife Central","2023-07",2,0.763,59.5,"ALERT",TRUE
+"Osun","Ife Central","2023-08",2,0.565,59.8,"WARNING",TRUE
+"Osun","Ife Central","2023-09",1,0.36,67,"WATCH",TRUE
+"Osun","Ife Central","2023-10",1,0.41,61,"WATCH",TRUE
+"Osun","Ife Central","2023-11",1,0.365,72,"WATCH",TRUE
+"Osun","Ife Central","2023-12",3,0.249,57.6,"WATCH",TRUE
+"Osun","Ife Central","2024-01",2,0.07,71,"WATCH",TRUE
+"Osun","Ife Central","2024-03",2,0.204,70.4,"WATCH",TRUE
+"Osun","Ife Central","2024-04",2,0.235,61,"WATCH",TRUE
+"Osun","Ife Central","2024-05",1,0.559,NA,"WARNING",FALSE
+"Osun","Ife Central","2024-06",3,0.658,51.4,"WARNING",TRUE
+"Osun","Ife Central","2024-07",2,0.839,67.2,"ALERT",TRUE
+"Osun","Ife Central","2024-08",4,0.621,60.5,"WARNING",TRUE
+"Osun","Ife Central","2024-09",1,0.758,67,"ALERT",TRUE
+"Osun","Ife Central","2024-10",2,0.363,65,"WATCH",TRUE
+"Osun","Ife Central","2024-11",3,0.407,65.6,"WATCH",TRUE
+"Osun","Ife Central","2025-01",1,0.156,NA,"WATCH",FALSE
+"Osun","Ife Central","2025-03",3,0.231,53.3,"WATCH",TRUE
+"Osun","Ife Central","2025-04",1,0.5,58.7,"WARNING",TRUE
+"Osun","Ife Central","2025-05",2,0.575,61,"WARNING",TRUE
+"Osun","Ife Central","2025-06",1,0.854,69,"ALERT",TRUE
+"Osun","Ife Central","2025-07",3,0.701,78,"ALERT",TRUE
+"Osun","Ife Central","2025-08",1,0.482,50,"WATCH",TRUE
+"Osun","Ife Central","2025-10",2,0.336,62,"WATCH",TRUE
+"Osun","Ife Central","2025-12",3,0.378,68.7,"WATCH",TRUE
+"Osun","Ife Central","2026-02",3,0.105,54,"WATCH",TRUE
+"Osun","Ife Central","2026-03",3,0.155,57.9,"WATCH",TRUE
+"Osun","Ife Central","2026-05",2,0.673,58.5,"WARNING",TRUE
+"Osun","Ife Central","2026-06",1,0.821,67,"ALERT",TRUE
+"Osun","Ilesa East","2022-01",1,0.145,NA,"WATCH",FALSE
+"Osun","Ilesa East","2022-02",3,0.099,60,"WATCH",TRUE
+"Osun","Ilesa East","2022-03",1,0.557,NA,"WARNING",FALSE
+"Osun","Ilesa East","2022-04",2,0.277,57.6,"WATCH",TRUE
+"Osun","Ilesa East","2022-05",1,0.732,NA,"ALERT",FALSE
+"Osun","Ilesa East","2022-08",2,0.737,58,"ALERT",TRUE
+"Osun","Ilesa East","2022-09",1,0.717,46.7,"ALERT",TRUE
+"Osun","Ilesa East","2022-11",1,0.353,NA,"WATCH",FALSE
+"Osun","Ilesa East","2022-12",3,0.272,41,"WATCH",TRUE
+"Osun","Ilesa East","2023-01",2,0.176,61,"WATCH",TRUE
+"Osun","Ilesa East","2023-02",5,0.143,67.8,"WATCH",TRUE
+"Osun","Ilesa East","2023-03",1,0.073,NA,"WATCH",FALSE
+"Osun","Ilesa East","2023-04",3,0.408,60,"WATCH",TRUE
+"Osun","Ilesa East","2023-05",1,0.641,NA,"WARNING",FALSE
+"Osun","Ilesa East","2023-06",1,0.448,53,"WATCH",TRUE
+"Osun","Ilesa East","2023-07",3,0.839,60.7,"ALERT",TRUE
+"Osun","Ilesa East","2023-08",2,0.47,62,"WATCH",TRUE
+"Osun","Ilesa East","2023-09",3,0.682,68,"WARNING",TRUE
+"Osun","Ilesa East","2023-10",2,0.492,62.5,"WATCH",TRUE
+"Osun","Ilesa East","2023-11",1,0.207,61,"WATCH",TRUE
+"Osun","Ilesa East","2023-12",3,0.204,61,"WATCH",TRUE
+"Osun","Ilesa East","2024-02",3,0.261,66,"WATCH",TRUE
+"Osun","Ilesa East","2024-04",2,0.316,77,"WATCH",TRUE
+"Osun","Ilesa East","2024-07",2,0.874,58,"ALERT",TRUE
+"Osun","Ilesa East","2024-08",1,0.648,64,"WARNING",TRUE
+"Osun","Ilesa East","2024-10",2,0.414,52,"WATCH",TRUE
+"Osun","Ilesa East","2024-11",2,0.575,71,"WARNING",TRUE
+"Osun","Ilesa East","2024-12",3,0.225,61.2,"WATCH",TRUE
+"Osun","Ilesa East","2025-01",2,0.15,NA,"WATCH",FALSE
+"Osun","Ilesa East","2025-02",1,0.077,57,"WATCH",TRUE
+"Osun","Ilesa East","2025-03",2,0.091,56.3,"WATCH",TRUE
+"Osun","Ilesa East","2025-04",2,0.483,52.8,"WATCH",TRUE
+"Osun","Ilesa East","2025-05",2,0.853,60,"ALERT",TRUE
+"Osun","Ilesa East","2025-07",4,0.753,55,"ALERT",TRUE
+"Osun","Ilesa East","2025-08",4,0.392,64.6,"WATCH",TRUE
+"Osun","Ilesa East","2025-09",3,0.533,61.5,"WARNING",TRUE
+"Osun","Ilesa East","2025-10",2,0.392,54.2,"WATCH",TRUE
+"Osun","Ilesa East","2025-11",2,0.265,63.4,"WATCH",TRUE
+"Osun","Ilesa East","2025-12",3,0.31,41,"WATCH",TRUE
+"Osun","Ilesa East","2026-01",2,0.208,66.7,"WATCH",TRUE
+"Osun","Ilesa East","2026-02",2,0.074,66.4,"WATCH",TRUE
+"Osun","Ilesa East","2026-03",2,0.251,55.2,"WATCH",TRUE
+"Osun","Ilesa East","2026-04",2,0.324,62,"WATCH",TRUE
+"Osun","Ilesa East","2026-06",3,0.704,46,"ALERT",TRUE
+"Osun","Iwo","2022-01",2,0.08,50.7,"WATCH",TRUE
+"Osun","Iwo","2022-02",2,0.062,72,"WATCH",TRUE
+"Osun","Iwo","2022-03",4,0.243,63.5,"WATCH",TRUE
+"Osun","Iwo","2022-05",2,0.762,51,"ALERT",TRUE
+"Osun","Iwo","2022-07",2,0.783,52.5,"ALERT",TRUE
+"Osun","Iwo","2022-08",3,0.646,59.2,"WARNING",TRUE
+"Osun","Iwo","2022-09",3,0.521,65.6,"WARNING",TRUE
+"Osun","Iwo","2022-10",1,0.429,NA,"WATCH",FALSE
+"Osun","Iwo","2022-11",2,0.412,53,"WATCH",TRUE
+"Osun","Iwo","2022-12",2,0.174,59.2,"WATCH",TRUE
+"Osun","Iwo","2023-01",3,0.085,66,"WATCH",TRUE
+"Osun","Iwo","2023-02",1,0.067,65,"WATCH",TRUE
+"Osun","Iwo","2023-03",3,0.146,76.8,"WATCH",TRUE
+"Osun","Iwo","2023-04",3,0.253,71,"WATCH",TRUE
+"Osun","Iwo","2023-05",1,0.733,45,"ALERT",TRUE
+"Osun","Iwo","2023-08",2,0.355,58,"WATCH",TRUE
+"Osun","Iwo","2023-09",2,0.72,84,"ALERT",TRUE
+"Osun","Iwo","2024-01",3,0.062,77.6,"WATCH",TRUE
+"Osun","Iwo","2024-02",1,0.236,NA,"WATCH",FALSE
+"Osun","Iwo","2024-03",2,0.263,58.6,"WATCH",TRUE
+"Osun","Iwo","2024-05",1,0.919,53.6,"ALERT",TRUE
+"Osun","Iwo","2024-06",3,0.826,67.4,"ALERT",TRUE
+"Osun","Iwo","2024-07",1,0.844,NA,"ALERT",FALSE
+"Osun","Iwo","2024-08",2,0.488,67.6,"WATCH",TRUE
+"Osun","Iwo","2024-11",2,0.402,57,"WATCH",TRUE
+"Osun","Iwo","2024-12",2,0.179,50,"WATCH",TRUE
+"Osun","Iwo","2025-01",2,0.215,57.9,"WATCH",TRUE
+"Osun","Iwo","2025-03",2,0.236,61.2,"WATCH",TRUE
+"Osun","Iwo","2025-04",1,0.324,73.3,"WATCH",TRUE
+"Osun","Iwo","2025-05",3,0.649,57.2,"WARNING",TRUE
+"Osun","Iwo","2025-06",1,0.479,54,"WATCH",TRUE
+"Osun","Iwo","2025-08",4,0.68,57.2,"WARNING",TRUE
+"Osun","Iwo","2025-09",2,0.404,59,"WATCH",TRUE
+"Osun","Iwo","2025-10",1,0.769,50.4,"ALERT",TRUE
+"Osun","Iwo","2025-11",2,0.317,70.6,"WATCH",TRUE
+"Osun","Iwo","2025-12",2,0.299,68,"WATCH",TRUE
+"Osun","Iwo","2026-01",1,0.054,56.8,"WATCH",TRUE
+"Osun","Iwo","2026-03",1,0.138,NA,"WATCH",FALSE
+"Osun","Iwo","2026-05",2,0.434,48.8,"WATCH",TRUE
+"Osun","Iwo","2026-06",1,0.865,39,"ALERT",TRUE
+"Osun","Osogbo","2022-01",4,0.134,56.8,"WATCH",TRUE
+"Osun","Osogbo","2022-02",1,0.195,64,"WATCH",TRUE
+"Osun","Osogbo","2022-04",3,0.431,50.9,"WATCH",TRUE
+"Osun","Osogbo","2022-05",1,0.618,78.4,"WARNING",TRUE
+"Osun","Osogbo","2022-06",1,0.653,80,"WARNING",TRUE
+"Osun","Osogbo","2022-07",1,0.838,62,"ALERT",TRUE
+"Osun","Osogbo","2022-08",3,0.82,64.5,"ALERT",TRUE
+"Osun","Osogbo","2022-09",2,0.788,60,"ALERT",TRUE
+"Osun","Osogbo","2022-10",3,0.675,63.4,"WARNING",TRUE
+"Osun","Osogbo","2022-11",1,0.525,NA,"WARNING",FALSE
+"Osun","Osogbo","2022-12",3,0.297,52,"WATCH",TRUE
+"Osun","Osogbo","2023-01",1,0.298,49,"WATCH",TRUE
+"Osun","Osogbo","2023-02",1,0.039,NA,"WATCH",FALSE
+"Osun","Osogbo","2023-04",2,0.486,64.6,"WATCH",TRUE
+"Osun","Osogbo","2023-05",3,0.585,51,"WARNING",TRUE
+"Osun","Osogbo","2023-06",1,0.824,56,"ALERT",TRUE
+"Osun","Osogbo","2023-07",1,0.744,55,"ALERT",TRUE
+"Osun","Osogbo","2023-08",2,0.605,66,"WARNING",TRUE
+"Osun","Osogbo","2023-09",2,0.379,71.2,"WATCH",TRUE
+"Osun","Osogbo","2023-10",1,0.6,NA,"WARNING",FALSE
+"Osun","Osogbo","2023-11",2,0.297,53,"WATCH",TRUE
+"Osun","Osogbo","2023-12",4,0.211,67,"WATCH",TRUE
+"Osun","Osogbo","2024-01",1,0.174,78,"WATCH",TRUE
+"Osun","Osogbo","2024-02",1,0.086,44,"WATCH",TRUE
+"Osun","Osogbo","2024-03",1,0.385,45.3,"WATCH",TRUE
+"Osun","Osogbo","2024-04",1,0.624,45,"WARNING",TRUE
+"Osun","Osogbo","2024-05",4,0.733,58,"ALERT",TRUE
+"Osun","Osogbo","2024-08",1,0.778,56,"ALERT",TRUE
+"Osun","Osogbo","2024-10",3,0.527,68.2,"WARNING",TRUE
+"Osun","Osogbo","2025-01",2,0.12,63.8,"WATCH",TRUE
+"Osun","Osogbo","2025-02",2,0.128,56,"WATCH",TRUE
+"Osun","Osogbo","2025-04",2,0.152,63,"WATCH",TRUE
+"Osun","Osogbo","2025-05",3,0.573,50.8,"WARNING",TRUE
+"Osun","Osogbo","2025-06",1,0.67,41.6,"WARNING",TRUE
+"Osun","Osogbo","2025-07",5,0.599,54,"WARNING",TRUE
+"Osun","Osogbo","2025-08",2,0.613,64.8,"WARNING",TRUE
+"Osun","Osogbo","2025-09",2,0.805,68.7,"ALERT",TRUE
+"Osun","Osogbo","2025-10",2,0.566,57.1,"WARNING",TRUE
+"Osun","Osogbo","2025-11",1,0.308,NA,"WATCH",FALSE
+"Osun","Osogbo","2025-12",1,0.087,64,"WATCH",TRUE
+"Osun","Osogbo","2026-02",1,0.131,41,"WATCH",TRUE
+"Osun","Osogbo","2026-03",3,0.241,59.7,"WATCH",TRUE
+"Osun","Osogbo","2026-05",1,0.457,42,"WATCH",TRUE
+"Osun","Osogbo","2026-06",2,0.406,66,"WATCH",TRUE

@@ -1,0 +1,20 @@
+# Go binaries and build artifacts
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+bin/
+tmp/
+
+# Test artifacts
+*.test
+*.out
+*.prof
+
+# Environment files
+.env.local
+
+# OS
+.DS_Store
+*.log

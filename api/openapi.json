@@ -1,0 +1,181 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "VECDIM Public Health Entomology API",
+    "version": "1.0.0",
+    "description": "Vector-Borne Disease Early Warning and Staged Ingestion Platform. Developed for Osun State University (UNIOSUN), MOOD Africa, and NMEP."
+  },
+  "servers": [
+    {
+      "url": "http://localhost:8080",
+      "description": "Local VECDIM API Server"
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "UserIdHeader": {
+        "type": "apiKey",
+        "in": "header",
+        "name": "X-User-Id",
+        "description": "Demo User ID: u_field_01 (Lagos), u_field_02 (Kano), u_field_03 (Osun), u_vecdim_osun (State), u_uniosun_01 (National)"
+      }
+    }
+  },
+  "security": [
+    {
+      "UserIdHeader": []
+    }
+  ],
+  "paths": {
+    "/health": {
+      "get": {
+        "summary": "Health check",
+        "tags": ["System"],
+        "responses": {
+          "200": {
+            "description": "Service is healthy",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": { "type": "string", "example": "ok" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/records/batch": {
+      "post": {
+        "summary": "Batch record ingestion (Staged Ingestion Pattern)",
+        "tags": ["Sync & Ingestion"],
+        "description": "Idempotent batch upload. Valid records saved as UNPROCESSED (staged). Bad records rejected with human-readable error messages. Always returns HTTP 200.",
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "example": {
+                "records": [
+                  {
+                    "record_id": "3f2a9c1e-5b7d-4e8a-9c21-7d4e5f6a8b90",
+                    "state": "Osun",
+                    "lga": "Osogbo",
+                    "ward": "Osogbo Ward 2",
+                    "latitude": 7.77,
+                    "longitude": 4.56,
+                    "gps_accuracy_m": 6.5,
+                    "collection_date": "2026-10-07",
+                    "species": "An. gambiae s.s.",
+                    "insecticide": "Permethrin",
+                    "n_exposed": 100,
+                    "n_dead": 54,
+                    "larval_density": 6,
+                    "urban": 1,
+                    "irs_covered": 0,
+                    "itn_use_pct": 61.5
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Batch processed with per-record results"
+          }
+        }
+      }
+    },
+    "/records": {
+      "get": {
+        "summary": "Query field records (Role-scoped)",
+        "tags": ["Records"],
+        "parameters": [
+          { "name": "state", "in": "query", "schema": { "type": "string" } },
+          { "name": "lga", "in": "query", "schema": { "type": "string" } },
+          { "name": "since", "in": "query", "schema": { "type": "string" } },
+          { "name": "limit", "in": "query", "schema": { "type": "integer", "default": 100 } }
+        ],
+        "responses": {
+          "200": { "description": "Filtered records list" }
+        }
+      }
+    },
+    "/alerts": {
+      "get": {
+        "summary": "Query Early Warning Alerts (R Random Forest Output)",
+        "tags": ["Alerts"],
+        "description": "Retrieves alerts from PostGIS. Returns 647 ground truth alerts with national tier totals: 86 ALERT, 135 WARNING, 426 WATCH.",
+        "parameters": [
+          { "name": "state", "in": "query", "schema": { "type": "string" } },
+          { "name": "lga", "in": "query", "schema": { "type": "string" } },
+          { "name": "tier", "in": "query", "schema": { "type": "string", "enum": ["ALERT", "WARNING", "WATCH"] } }
+        ],
+        "responses": {
+          "200": { "description": "Alerts with tier totals" }
+        }
+      }
+    },
+    "/alerts/{id}/acknowledge": {
+      "post": {
+        "summary": "Acknowledge an early warning alert",
+        "tags": ["Alerts"],
+        "parameters": [
+          { "name": "id", "in": "path", "required": true, "schema": { "type": "string", "example": "Osun|Iwo|2026-06" } }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "example": { "note": "Deployed indoor residual spraying teams." }
+            }
+          }
+        },
+        "responses": {
+          "200": { "description": "Alert acknowledged" }
+        }
+      }
+    },
+    "/risk-points": {
+      "get": {
+        "summary": "Spatial bounding-box query (PostGIS)",
+        "tags": ["Spatial GIS"],
+        "description": "Returns risk points inside a spatial bounding box as GeoJSON FeatureCollection.",
+        "parameters": [
+          { "name": "bbox", "in": "query", "schema": { "type": "string", "default": "2.5,4.0,15.0,14.0" }, "description": "minLon,minLat,maxLon,maxLat" }
+        ],
+        "responses": {
+          "200": { "description": "GeoJSON FeatureCollection" }
+        }
+      }
+    },
+    "/export/dhis2": {
+      "get": {
+        "summary": "Export records to DHIS2 dataValueSets format",
+        "tags": ["DHIS2 Integration"],
+        "parameters": [
+          { "name": "state", "in": "query", "schema": { "type": "string" } },
+          { "name": "month", "in": "query", "schema": { "type": "string" } }
+        ],
+        "responses": {
+          "200": { "description": "Standard DHIS2 dataValueSets JSON" }
+        }
+      }
+    },
+    "/pipeline/run": {
+      "post": {
+        "summary": "Trigger staged R analytics pipeline",
+        "tags": ["Analytics Pipeline"],
+        "description": "Reconciles staged UNPROCESSED records, executes R Random Forest model, and updates PostGIS.",
+        "parameters": [
+          { "name": "trigger", "in": "query", "schema": { "type": "string", "default": "on_demand_api" } }
+        ],
+        "responses": {
+          "200": { "description": "Pipeline execution report" }
+        }
+      }
+    }
+  }
+}

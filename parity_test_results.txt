@@ -1,0 +1,11 @@
+================================================================================
+VECDIM VALIDATION ENGINE PARITY TEST REPORT
+================================================================================
+Total Records Evaluated : 1525
+Ground Truth Rows in R  : 1525
+Go Flagged Records      : 222 (Expected: 222)
+Go Clean Records        : 1303 (Expected: 1,303)
+R Flagged Records       : 222
+Differing Rows          : 0 (Threshold: <= 5, Target: 0)
+Parity Accuracy         : 100.00%
+================================================================================
