@@ -471,10 +471,10 @@ const DashboardHTML = `<!DOCTYPE html>
         attributionControl: false
       }).setView([CENTERS.Osun.lat, CENTERS.Osun.lng], CENTERS.Osun.zoom);
 
-      // Light CartoDB Positron Basemap for clean visual elegance
-      L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+      // OpenStreetMap Tiles — Fast, Clean, Free, No Watermark
+      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 18,
-        subdomains: 'abcd'
+        attribution: '&copy; OpenStreetMap contributors'
       }).addTo(map);
 
       markersLayer.addTo(map);
@@ -538,7 +538,11 @@ const DashboardHTML = `<!DOCTYPE html>
         var res = await fetch('/api/v1/risk-points');
         var data = await res.json();
         allPoints = data.points || [];
-        renderMarkers(allPoints);
+        allPoints.forEach(function(pt) {
+          pt.tier = pt.tier || pt.risk_tier || 'WATCH';
+          pt.p_high = pt.p_high !== undefined ? pt.p_high : (pt.predicted_risk || 0);
+        });
+        filterMapPoints();
       } catch (err) {
         console.error("Failed to load risk points:", err);
       }
@@ -547,37 +551,38 @@ const DashboardHTML = `<!DOCTYPE html>
     function renderMarkers(points) {
       markersLayer.clearLayers();
       points.forEach(function(pt) {
-        var color = '#10B981'; // Green
-        var radius = 7;
-        if (pt.risk_tier === 'ALERT' || pt.risk_tier === 'Emergency') {
-          color = '#E11D48'; // Rose
+        var tier = pt.tier || pt.risk_tier || 'WATCH';
+        var color = '#10B981'; // Green (Watch / Low)
+        var radius = 6;
+        if (tier === 'ALERT' || tier === 'Emergency') {
+          color = '#E11D48'; // Rose (Alert / High Surge)
           radius = 9;
-        } else if (pt.risk_tier === 'WARNING') {
-          color = '#F59E0B'; // Amber
+        } else if (tier === 'WARNING') {
+          color = '#F59E0B'; // Amber (Warning)
           radius = 8;
-        } else if (pt.risk_tier === 'WATCH') {
+        } else if (tier === 'WATCH') {
           color = '#2563EB'; // Blue
-          radius = 7;
+          radius = 6;
         }
 
         var marker = L.circleMarker([pt.latitude, pt.longitude], {
           radius: radius,
           fillColor: color,
           color: '#FFFFFF',
-          weight: 2,
-          opacity: 1,
-          fillOpacity: 0.85
+          weight: 1.5,
+          opacity: 0.95,
+          fillOpacity: 0.82
         });
 
         marker.bindPopup(
           '<div class="p-1">' +
-            '<span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">' + (pt.state || 'Osun') + ' State</span>' +
-            '<strong class="text-sm font-bold text-slate-900 block">' + (pt.lga || 'Sentinel Site') + '</strong>' +
+            '<span class="text-[10px] font-bold uppercase tracking-wider text-slate-400 block">' + (pt.state || 'State') + ' State</span>' +
+            '<strong class="text-sm font-bold text-slate-900 block">' + (pt.lga || 'Sentinel Site') + (pt.ward ? (' — ' + pt.ward) : '') + '</strong>' +
             '<div class="mt-1.5 flex items-center space-x-1.5">' +
-              '<span class="w-2 h-2 rounded-full" style="background-color:' + color + '"></span>' +
-              '<span class="text-xs font-bold" style="color:' + color + '">' + (pt.risk_tier || 'CONTROLLED') + '</span>' +
+              '<span class="w-2.5 h-2.5 rounded-full" style="background-color:' + color + '"></span>' +
+              '<span class="text-xs font-bold" style="color:' + color + '">' + tier + '</span>' +
             '</div>' +
-            '<div class="text-[11px] text-slate-500 mt-1">Predicted Risk Score: ' + Number(pt.predicted_risk || 0).toFixed(3) + '</div>' +
+            '<div class="text-[11px] text-slate-600 mt-1">Transmission Probability: ' + (Number(pt.p_high || 0) * 100).toFixed(1) + '%</div>' +
             '<div class="text-[10px] text-slate-400 mt-0.5">GPS: ' + Number(pt.latitude).toFixed(4) + ', ' + Number(pt.longitude).toFixed(4) + '</div>' +
           '</div>'
         );
@@ -592,14 +597,17 @@ const DashboardHTML = `<!DOCTYPE html>
       var selectedTier = document.getElementById('map-tier-select').value;
 
       var filtered = allPoints.filter(function(pt) {
+        var tier = pt.tier || pt.risk_tier || 'WATCH';
+        var matchState = currentScope === 'National' || !pt.state || pt.state.toLowerCase() === currentScope.toLowerCase();
         var matchSearch = !search || 
           (pt.lga && pt.lga.toLowerCase().includes(search)) || 
+          (pt.ward && pt.ward.toLowerCase().includes(search)) || 
           (pt.state && pt.state.toLowerCase().includes(search));
 
         var matchLga = selectedLga === 'ALL' || pt.lga === selectedLga;
-        var matchTier = selectedTier === 'ALL' || pt.risk_tier === selectedTier;
+        var matchTier = selectedTier === 'ALL' || tier === selectedTier;
 
-        return matchSearch && matchLga && matchTier;
+        return matchState && matchSearch && matchLga && matchTier;
       });
 
       renderMarkers(filtered);
@@ -628,18 +636,24 @@ const DashboardHTML = `<!DOCTYPE html>
         }
 
         container.innerHTML = filtered.slice(0, 10).map(function(alert) {
-          var isCritical = alert.severity === 'CRITICAL';
+          var isCritical = alert.tier === 'ALERT';
           var badgeBg = isCritical ? 'bg-rose-50 text-rose-700 border-rose-200' : 'bg-amber-50 text-amber-700 border-amber-200';
+          var alertTitle = alert.tier === 'ALERT' ? 'Surge Transmission Alert' : (alert.tier === 'WARNING' ? 'Elevated Vector Risk' : 'Surveillance Watch');
+          var riskPercent = (Number(alert.mean_risk || 0) * 100).toFixed(0);
+          
           return (
             '<div class="p-3.5 rounded-xl border ' + (isCritical ? 'border-rose-200 bg-rose-50/40' : 'border-slate-100 bg-white') + ' shadow-2xs">' +
               '<div class="flex items-center justify-between mb-1">' +
                 '<span class="px-2 py-0.5 rounded text-[9.5px] font-extrabold uppercase border ' + badgeBg + '">' +
-                  (alert.severity || 'WARNING') + ' • ' + (alert.state || 'Osun') +
+                  (alert.tier || 'WARNING') + ' • ' + (alert.state || 'Osun') + (alert.month ? (' (' + alert.month + ')') : '') +
                 '</span>' +
-                '<span class="text-[10px] text-slate-400 font-mono">' + (alert.created_at || '').substring(0, 10) + '</span>' +
+                '<span class="text-[10px] text-slate-400 font-mono font-bold">' + riskPercent + '% Risk</span>' +
               '</div>' +
-              '<div class="text-xs font-bold text-slate-900 mt-1">' + (alert.lga || 'Sentinel') + ' — ' + (alert.title || alert.alert_type) + '</div>' +
-              '<p class="text-[11px] text-slate-500 mt-1 leading-relaxed">' + (alert.message || 'Vector transmission surge detected.') + '</p>' +
+              '<div class="text-xs font-bold text-slate-900 mt-1">' + (alert.lga || 'Sentinel') + ' — ' + alertTitle + '</div>' +
+              '<p class="text-[11px] text-slate-500 mt-1 leading-relaxed">' + 
+                'Vector surge detected. Mean risk score: ' + riskPercent + '%.' +
+                (alert.pyrethroid_resistance_flag ? ' Resistance flagged (' + Number(alert.mean_pyrethroid_mort || 0).toFixed(1) + '% mort).' : '') +
+              '</p>' +
               '<div class="flex items-center justify-between pt-2 border-t border-slate-100 mt-2">' +
                 '<span class="text-[10px] text-emerald-700 font-bold">IRS & Larviciding Deployment</span>' +
                 '<button onclick="ackAlert(\'' + alert.id + '\', this)" class="px-2.5 py-1 rounded-lg text-[10px] font-bold ' + 
