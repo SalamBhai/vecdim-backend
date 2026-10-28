@@ -149,8 +149,13 @@ func (s *Service) ProcessBatch(ctx context.Context, req BatchSyncRequest) (*Batc
 			SetMortalityPct(mortalityPct).
 			SetWhoClass(whoClass).
 			SetUrban(rec.Urban).
-			SetIrsCovered(rec.IRSCovered).
-			SetStatus("UNPROCESSED") // Staging architecture: R will update to CLEAN / FLAGGED
+			SetIrsCovered(rec.IRSCovered)
+
+		if rec.NExposed == 0 {
+			createOp.SetStatus("PENDING_BIOASSAY") // Phase 1 Larval Dip: staged, awaiting tube-test bioassay
+		} else {
+			createOp.SetStatus("UNPROCESSED") // Completed survey: staged for R analytics pipeline
+		}
 
 		if user.UserID != "" {
 			createOp.SetUserID(user.UserID)

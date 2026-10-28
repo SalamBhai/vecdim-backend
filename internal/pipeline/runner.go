@@ -33,9 +33,12 @@ type PipelineRunResult struct {
 func (r *Runner) TriggerPipeline(ctx context.Context, triggerMethod string) (*PipelineRunResult, error) {
 	start := time.Now()
 
-	// Query number of staged UNPROCESSED records
+	// Query number of staged UNPROCESSED records with completed bioassays (n_exposed > 0)
 	unprocessed, err := r.client.FieldRecord.Query().
-		Where(fieldrecord.StatusEQ("UNPROCESSED")).
+		Where(
+			fieldrecord.StatusEQ("UNPROCESSED"),
+			fieldrecord.NExposedGT(0),
+		).
 		All(ctx)
 	if err != nil {
 		return nil, fmt.Errorf("failed to query staged records: %w", err)
