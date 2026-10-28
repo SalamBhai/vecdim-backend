@@ -133,7 +133,37 @@ func (s *Service) ProcessBatch(ctx context.Context, req BatchSyncRequest) (*Batc
 
 		savedRecord, err := createOp.Save(ctx)
 		if err != nil {
-			// If duplicate primary key was inserted concurrently
+			// Check if this is completing an existing Bioassay Pending record (Phase 2 lab update)
+			existing, getErr := s.client.FieldRecord.Get(ctx, rec.RecordID)
+			if getErr == nil && existing != nil && existing.NExposed == 0 && rec.NExposed > 0 {
+				updateOp := s.client.FieldRecord.UpdateOneID(existing.ID).
+					SetNExposed(rec.NExposed).
+					SetNDead(rec.NDead).
+					SetMortalityPct(mortalityPct).
+					SetWhoClass(whoClass).
+					SetStatus("UNPROCESSED")
+
+				if rec.Insecticide != nil {
+					updateOp.SetInsecticide(*rec.Insecticide)
+				}
+				if rec.Species != nil {
+					updateOp.SetSpecies(*rec.Species)
+				}
+
+				_, updateErr := updateOp.Save(ctx)
+				if updateErr == nil {
+					acceptedCount++
+					results[i] = RecordSyncResult{
+						RecordID: rec.RecordID,
+						Status:   "accepted",
+						Flags:    warns,
+						Errors:   []validation.ValidationError{},
+					}
+					continue
+				}
+			}
+
+			// True duplicate / idempotent retry
 			results[i] = RecordSyncResult{
 				RecordID: rec.RecordID,
 				Status:   "already_received",
