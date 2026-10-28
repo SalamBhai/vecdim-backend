@@ -1,7 +1,7 @@
 # VECDIM Core Backend API & Spatial Database
 **Vector-Borne Disease Early Warning and Ingestion Platform**  
 *Lead Developer Technical Submission — Osun State University (UNIOSUN)*  
-*Author: Sheriffdeen Saula (`salambhai.dev`)*
+*Author: Sheriffdeen Saula (`saulasheriffdeen@gmail.com`)*
 
 ---
 
