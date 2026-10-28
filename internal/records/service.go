@@ -46,10 +46,10 @@ func (s *Service) GetRecords(ctx context.Context, filter QueryFilter) ([]*ent.Fi
 
 	// Apply URL filter overrides (if permitted by role)
 	if filter.State != "" && user.Role != "vecdim" {
-		predicates = append(predicates, fieldrecord.StateEQ(filter.State))
+		predicates = append(predicates, fieldrecord.StateEqualFold(filter.State))
 	}
 	if filter.LGA != "" {
-		predicates = append(predicates, fieldrecord.LgaEQ(filter.LGA))
+		predicates = append(predicates, fieldrecord.LgaEqualFold(filter.LGA))
 	}
 	if filter.Since != "" {
 		predicates = append(predicates, fieldrecord.CollectionDateGTE(filter.Since))
