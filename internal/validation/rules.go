@@ -74,7 +74,7 @@ type ValidationFlagsAll struct {
 // and returns (mortalityPct, whoClass).
 func CalculateWHOMortalityClass(nExposed, nDead int) (float64, string) {
 	if nExposed <= 0 {
-		return 0.0, "Resistant"
+		return 0.0, "Bioassay Pending"
 	}
 	rawPct := (float64(nDead) / float64(nExposed)) * 100.0
 	roundedPct := math.Round(rawPct*10.0) / 10.0
