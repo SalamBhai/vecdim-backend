@@ -57,7 +57,50 @@ func (s *Service) ProcessBatch(ctx context.Context, req BatchSyncRequest) (*Batc
 			Only(ctx)
 
 		if err == nil && existing != nil {
-			// Record was already processed and stored
+			// Check if incoming payload is completing Phase 2 (WHO Bioassay) for an existing Stage 1 (Larval) record
+			if existing.NExposed == 0 && rec.NExposed > 0 {
+				serverClockDate := time.Now().Format("2006-01-02")
+				blocks, warns := validation.ValidateSingleRecord(rec, serverClockDate, true)
+				if len(blocks) > 0 {
+					rejectedCount++
+					results[i] = RecordSyncResult{
+						RecordID: rec.RecordID,
+						Status:   "rejected",
+						Flags:    warns,
+						Errors:   blocks,
+					}
+					continue
+				}
+
+				mortalityPct, whoClass := validation.CalculateWHOMortalityClass(rec.NExposed, rec.NDead)
+				updateOp := s.client.FieldRecord.UpdateOneID(existing.ID).
+					SetNExposed(rec.NExposed).
+					SetNDead(rec.NDead).
+					SetMortalityPct(mortalityPct).
+					SetWhoClass(whoClass).
+					SetStatus("UNPROCESSED")
+
+				if rec.Insecticide != nil {
+					updateOp.SetInsecticide(*rec.Insecticide)
+				}
+				if rec.Species != nil {
+					updateOp.SetSpecies(*rec.Species)
+				}
+
+				_, updateErr := updateOp.Save(ctx)
+				if updateErr == nil {
+					acceptedCount++
+					results[i] = RecordSyncResult{
+						RecordID: rec.RecordID,
+						Status:   "accepted",
+						Flags:    warns,
+						Errors:   []validation.ValidationError{},
+					}
+					continue
+				}
+			}
+
+			// True duplicate / idempotent replay
 			results[i] = RecordSyncResult{
 				RecordID: rec.RecordID,
 				Status:   "already_received",
