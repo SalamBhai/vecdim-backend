@@ -50,11 +50,18 @@ func (r *Runner) TriggerPipeline(ctx context.Context, triggerMethod string) (*Pi
 
 	if lookErr == nil && rPath != "" {
 		// Run Rscript R/run_all.R
-		cmd := exec.CommandContext(ctx, "Rscript", "R/run_all.R")
-		cmd.Dir = "../"
+		cmd := exec.CommandContext(ctx, "Rscript", "R/run_all.R", "data/vecdim_dummy_entomology_data.csv", "outputs")
+		cmd.Dir = "."
 		if out, err := cmd.CombinedOutput(); err == nil {
 			executedInR = true
 			_ = out
+		} else {
+			cmd2 := exec.CommandContext(ctx, "Rscript", "R/run_all.R", "data/vecdim_dummy_entomology_data.csv", "outputs")
+			cmd2.Dir = "../"
+			if out2, err2 := cmd2.CombinedOutput(); err2 == nil {
+				executedInR = true
+				_ = out2
+			}
 		}
 	}
 
