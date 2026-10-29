@@ -52,16 +52,10 @@ func main() {
 	}
 	defer client.Close()
 
-	// 1. Seed Demo Users
-	seedDemoUsers(ctx, client)
-
-	// 2. Seed Alerts (647 Ground Truth alerts)
-	seedAlerts(ctx, client)
-
-	// 3. Seed Risk Points (for PostGIS spatial query)
-	seedRiskPoints(ctx, client)
-
-	log.Println("Database seeding completed successfully!")
+	// Run Seeding
+	if err := database.SeedAll(ctx, client); err != nil {
+		log.Fatalf("Database seeding failed: %v", err)
+	}
 }
 
 func seedDemoUsers(ctx context.Context, client *ent.Client) {

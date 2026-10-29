@@ -13,16 +13,20 @@ import (
 
 // Config holds database connection parameters.
 type Config struct {
-	Host     string
-	Port     int
-	User     string
-	Password string
-	DBName   string
-	SSLMode  string
+	DatabaseURL string
+	Host        string
+	Port        int
+	User        string
+	Password    string
+	DBName      string
+	SSLMode     string
 }
 
 // DSN returns the PostgreSQL connection string.
 func (c Config) DSN() string {
+	if c.DatabaseURL != "" {
+		return c.DatabaseURL
+	}
 	if c.Host == "" {
 		c.Host = "localhost"
 	}
