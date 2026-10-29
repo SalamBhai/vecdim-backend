@@ -140,3 +140,22 @@ make seed
 # 5. Start API server on http://localhost:8080
 make run
 ```
+
+---
+
+## 7. AI Tools Disclosure
+
+In accordance with candidate instructions, the use of AI tools during the technical assessment is transparently disclosed below:
+
+- **Tools Used**: Google Antigravity Agentic AI Assistant (powered by Google DeepMind reasoning models).
+- **What the Assistant Did Well**:
+  - Accelerated initial boilerplate setup (Go modulith project layout, Ent ORM entity schemas, and HTTP handler scaffolding).
+  - Generated repetitive SQL migration scripts and test fixtures matching the Form E-1 specification.
+  - Formatted test tables and comparison reports for evaluating the 1,525 historical benchmark records.
+- **Where Human Engineering & Corrections Were Required**:
+  - **Go Architecture Decision**: Chose Go Modulith over Node.js for low-latency spatial queries, memory safety, and Goroutine concurrency during peak batch syncs.
+  - **Two-Phase Lifecycle Upsert**: Identified the need to allow insectary technicians to record Day 7 WHO bioassay mortality for existing Day 1 field surveys without getting rejected as duplicate records.
+  - **Mathematical Parity Verification**: Corrected coordinate rounding and floating-point comparisons in Go to achieve an exact **100.00% match (0 differing rows)** with `R/helpers.R`.
+  - **National DHIS2 Mapping**: Implemented the aggregation logic and JSON schema to export clean surveys into Nigeria's standard DHIS2 `dataValueSets`.
+- **Author Accountability**: I personally reviewed, tested, and understand every line of code submitted, and can walk through any part of the system during the technical interview.
+
