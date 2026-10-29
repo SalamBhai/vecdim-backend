@@ -1,0 +1,5 @@
+"setting","mean_auc","sd_auc","fold1","fold2","fold3","fold4","fold5"
+"Covariates only | random 5-fold",0.82,0.039,0.849,0.843,0.761,0.848,0.8
+"Covariates only | LGA-grouped (spatial) 5-fold",0.817,0.066,0.724,0.909,0.816,0.833,0.801
+"Covariates + lat/lon | random 5-fold",0.885,0.035,0.91,0.904,0.83,0.91,0.873
+"Covariates + lat/lon | LGA-grouped (spatial) 5-fold",0.802,0.072,0.718,0.912,0.794,0.819,0.769
