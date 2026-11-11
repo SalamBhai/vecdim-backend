@@ -15,6 +15,7 @@ import (
 type Config struct {
 	Port             string
 	Env              string // development, production, test
+	DatabaseURL      string
 	DBHost           string
 	DBPort           int
 	DBUser           string
@@ -26,6 +27,9 @@ type Config struct {
 
 // DSN returns the PostgreSQL connection string.
 func (c *Config) DSN() string {
+	if c.DatabaseURL != "" {
+		return c.DatabaseURL
+	}
 	return fmt.Sprintf("host=%s port=%d user=%s password=%s dbname=%s sslmode=%s",
 		c.DBHost, c.DBPort, c.DBUser, c.DBPassword, c.DBName, c.DBSSLMode)
 }
@@ -50,6 +54,7 @@ func Load() *Config {
 	port := getEnv("PORT", "8080")
 	env := getEnv("APP_ENV", "development")
 
+	databaseURL := getEnv("DATABASE_URL", "")
 	dbHost := getEnv("DB_HOST", "localhost")
 	dbPort := getEnvInt("DB_PORT", 5432)
 	dbUser := getEnv("DB_USER", "vecdim_admin")
@@ -58,12 +63,12 @@ func Load() *Config {
 
 	// Secrets hygiene: Enforce explicit secrets in production; fallback to sandbox secrets in dev/test.
 	var dbPassword string
-	if strings.ToLower(env) == "production" {
+	if strings.ToLower(env) == "production" && databaseURL == "" {
 		dbPassword = requireEnv("DB_PASSWORD")
 		if dbPassword == "vecdim_secret_2026" {
 			log.Fatalf("FATAL CONFIG ERROR: In production, DB_PASSWORD cannot use the development default value.")
 		}
-	} else {
+	} else if databaseURL == "" {
 		dbPassword = getEnv("DB_PASSWORD", "vecdim_secret_2026")
 	}
 
@@ -72,6 +77,7 @@ func Load() *Config {
 	return &Config{
 		Port:             port,
 		Env:              env,
+		DatabaseURL:      databaseURL,
 		DBHost:           dbHost,
 		DBPort:           dbPort,
 		DBUser:           dbUser,

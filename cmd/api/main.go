@@ -37,12 +37,13 @@ func main() {
 
 	// Database connection (PostGIS / PostgreSQL)
 	dbCfg := database.Config{
-		Host:     appCfg.DBHost,
-		Port:     appCfg.DBPort,
-		User:     appCfg.DBUser,
-		Password: appCfg.DBPassword,
-		DBName:   appCfg.DBName,
-		SSLMode:  appCfg.DBSSLMode,
+		DatabaseURL: appCfg.DatabaseURL,
+		Host:        appCfg.DBHost,
+		Port:        appCfg.DBPort,
+		User:        appCfg.DBUser,
+		Password:    appCfg.DBPassword,
+		DBName:      appCfg.DBName,
+		SSLMode:     appCfg.DBSSLMode,
 	}
 	client, rawDB, err := database.Connect(ctx, dbCfg)
 	if err != nil {
@@ -50,6 +51,12 @@ func main() {
 	} else {
 		defer client.Close()
 		log.Println("Connected to PostGIS 16-3.4 database successfully!")
+
+		// Auto-seed if database is empty (e.g. fresh cloud deployment)
+		if alertCount, countErr := client.Alert.Query().Count(ctx); countErr == nil && alertCount == 0 {
+			log.Println("Database is empty. Automatically seeding demo users, alerts, and risk points...")
+			_ = database.SeedAll(ctx, client)
+		}
 	}
 
 	// Module Services

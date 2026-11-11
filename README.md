@@ -131,6 +131,9 @@ make test
 # 2. Run the 11-rule ground truth parity verification
 make parity-test
 
+# 3. Benchmark validation throughput against all 1,525 records
+make benchmark
+
 # 3. Start PostGIS container
 make docker-up
 
@@ -158,4 +161,3 @@ In accordance with candidate instructions, the use of AI tools during the techni
   - **Mathematical Parity Verification**: Corrected coordinate rounding and floating-point comparisons in Go to achieve an exact **100.00% match (0 differing rows)** with `R/helpers.R`.
   - **National DHIS2 Mapping**: Implemented the aggregation logic and JSON schema to export clean surveys into Nigeria's standard DHIS2 `dataValueSets`.
 - **Author Accountability**: I personally reviewed, tested, and understand every line of code submitted, and can walk through any part of the system during the technical interview.
-
